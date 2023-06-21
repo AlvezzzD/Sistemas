@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Banca USJT</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="shortcut icon" href="/img/icone.ico" type="image/x-icon">
+  <script src="/js/carrinhoController.js"></script>
+</head>
+<body>
+  
+  <header class="fixed-header">
+    <h1>Banca USJT</h1>
+    <img src="/img/newsstand.png" alt="">
+    <nav>
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/contato">Contato</a></li>
+        <li><a class="selecionado" href="/Produtos">Produtos</a></li> <!-- Adicionado o link para a página do carrinho -->
+        <li><a href="/carrinho">Carrinho </a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="carrinho">
+      <h3>Produtos</h3>
+      <div class="jornais">
+
+        <div class="jornal">
+          <img class="foto1" src="/img/g1.jpg" alt="Jornal A" width="550px" height="800px">
+          <h3>G1</h3>
+          <p>Últimas notícias do Brasil e do mundo, sobre política, economia, emprego, educação, saúde, meio ambiente, tecnologia, ciência, cultura e carros.</p>
+          <h6 id="g1">0</h6>
+            <div class="quantity-buttons">
+              <button class="quantity-button" onclick="decrementQuantity('quantidadeg1')">-</button>
+              <span id="quantidadeg1">0</span>
+              <button class="quantity-button" onclick="incrementQuantity('quantidadeg1')">+</button>
+            </div>
+          <button class="link1" onclick="toggleCartButton(this, 'g1')">Comprar</button>
+          <hr>
+          <br>
+        </div>
+        <div class="jornal">
+          <img src="/img/OGlobo.jpg" alt="Jornal B" width="550px" height="800px">
+          <h3>O Globo</h3>
+          <p>Fique atualizado com as principais notícias e acompanhe tudo o que está acontecendo no Brasil e no mundo. Acesse O GLOBO!</p>
+          <h6 id="oglobo">0</h6>
+            <div class="quantity-buttons">
+              <button class="quantity-button" onclick="decrementQuantity('quantidadeoglobo')">-</button>
+              <span id="quantidadeoglobo">0</span>
+              <button class="quantity-button" onclick="incrementQuantity('quantidadeoglobo')">+</button>
+            </div>
+          <button class="link2" onclick="toggleCartButton(this, 'oglobo')">Comprar</button>
+          <hr>
+          <br>
+        </div>
+        <div class="jornal">
+          <img src="/img/folha-290420-1-1.jpg" alt="Jornal C" width="550px" height="800px">
+          <h3>Folha de São Paulo</h3>
+          <p>Siga a Folha e fique informado sobre tudo o que acontece no Brasil e no mundo. Notícias sobre política, economia, cultura, esporte, entretenimento e mais.</p>
+          <h6 id="folha">0</h6>
+            <div class="quantity-buttons">
+              <button class="quantity-button" onclick="decrementQuantity('quantidadefolha')">-</button>
+              <span id="quantidadefolha">0</span>
+              <button class="quantity-button" onclick="incrementQuantity('quantidadefolha')">+</button>
+            </div>
+          <button class="link3" onclick="toggleCartButton(this, 'folha')">Comprar</button>
+          <hr>
+          <br>
+        </div>
+        <div class="jornal">
+          <img src="/img/estadao.jpg" alt="Jornal D" width="550px" height="800px">
+          <h3>Estadão</h3>
+          <p>As principais e as últimas notícias do Brasil e do mundo sobre política, economia, esportes, cultura, tecnologia, estilo de vida e muito mais.</p>
+          <h6 id="estadao">0</h6>
+            <div class="quantity-buttons">
+              <button class="quantity-button" onclick="decrementQuantity('quantidadeestadao')">-</button>
+              <span id="quantidadeestadao">0</span>
+              <button class="quantity-button" onclick="incrementQuantity('quantidadeestadao')">+</button>
+            </div>
+          <button class="link4" onclick="toggleCartButton(this, 'estadao')">Comprar</button>
+          <hr>
+          <br>
+        </div>
+        <div class="jornais">
+          <div class="jornal">
+            <img class="foto1" src="/img/cab.jpg" alt="Revista A" width="550px" height="800px">
+            <h3>EXTRA</h3>
+            <p>Leia as principais notícias do Rio e do mundo.</p>
+            <h6 id="extra">0</h6>
+            <div class="quantity-buttons">
+              <button class="quantity-button" onclick="decrementQuantity('quantidadeextra')">-</button>
+              <span id="quantidadeextra">0</span>
+              <button class="quantity-button" onclick="incrementQuantity('quantidadeextra')">+</button>
+            </div>
+            <button class="link5" onclick="toggleCartButton(this, 'extra')">Comprar</button>
+            <hr>
+            <br>
+          </div>
+          <div class="jornal">
+            <img src="/img/VJ-CAPA-2735-V (1).jpg" alt="Revista B" width="550px" height="800px">
+            <h3>VEJA</h3>
+            <p>Principais informações sobre política, economia, saúde, tecnologia, esporte e cultura.</p>
+            <h6 id="veja">0</h6>
+            <div class="quantity-buttons">
+              <button class="quantity-button" onclick="decrementQuantity('quantidadeveja')">-</button>
+              <span id="quantidadeveja">0</span>
+              <button class="quantity-button" onclick="incrementQuantity('quantidadeveja')">+</button>
+            </div>
+            <button class="link6" onclick="toggleCartButton(this, 'veja')">Comprar</button>
+            <br>
+          </div>
+          <div class="jornal">
+            <img src="/img/whatsapp_image_2022-05-06_at_19.53.40.jpg" alt="Revista C" width="550px" height="800px">
+            <h3>Globo Rural</h3>
+            <p>Notícias sobre agronegócios, agricultura, pecuária, sustentabilidade, previsão do tempo, como plantar, criar e fazer e o mundo do campo.</p>
+            <h6 id="globorural">0</h6>
+            <div class="quantity-buttons">
+              <button class="quantity-button" onclick="decrementQuantity('quantidadegloborural')">-</button>
+              <span id="quantidadegloborural">0</span>
+              <button class="quantity-button" onclick="incrementQuantity('quantidadegloborural')">+</button>
+            </div>
+            <button class="link7" onclick="toggleCartButton(this, 'globorural')">Comprar</button>
+            <hr>
+            <br>
+          </div>
+          <div class="jornal">
+            <img src="/img/forbes.jpg" alt="Revista D" width="550px" height="800px">
+            <h3>Forbes</h3>
+            <p>Forbes, a mais conceituada revista de negócios e economia do mundo.</p>
+            <h6 id="forbes">0</h6>
+            <div class="quantity-buttons">
+              <button class="quantity-button" onclick="decrementQuantity('quantidadeforbes')">-</button>
+              <span id="quantidadeforbes">0</span>
+              <button class="quantity-button" onclick="incrementQuantity('quantidadeforbes')">+</button>
+            </div>
+            <button class="link8" onclick="toggleCartButton(this, 'forbes')">Comprar</button>
+            <hr>
+            <br>
+          </div>
+          <div class="chocolate">
+            <img src="/img/chocolate lacta.png" alt="Chocolate" width="550px" height="800px">
+            <h3>Chocolate</h3>
+            <p>Delicioso chocolate para saborear.</p>
+            <h6 id="chocolate">0</h6>
+            <div class="quantity-buttons">
+              <button class="quantity-button" onclick="decrementQuantity('quantidadechocolate')">-</button>
+              <span id="quantidadechocolate">0</span>
+              <button class="quantity-button" onclick="incrementQuantity('quantidadechocolate')">+</button>
+            </div> 
+            <button class="link9" onclick="toggleCartButton(this, 'chocolate')">Comprar</button>
+            <hr>
+            <br>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Feitos pelos estudantes da USJT ®</p>
+  </footer>
+
+  <script>
+    var saldo = 0;
+    function getSaldo(produto) {
+      fetch('/getSaldo?produto=' + produto)
+        .then(response => response.text())
+        .then(valor => {
+          document.getElementById(produto).textContent = 'Saldo: ' + valor;
+          saldo = valor;
+      });
+    }
+
+    let lista = ['chocolate', 'forbes', 'globorural', 'veja', 'extra', 'estadao', 'folha', 'oglobo', 'g1'];
+
+    lista.forEach(item => getSaldo(item));
+
+    function adicionarAoCarrinho(produto, quantidade) {
+      fetch('/adicionar-ao-carrinho?produto=' + produto + '&quantidade=' + quantidade)
+        .then(response => response.text())
+        .then(valor => {
+          document.getElementById(produto).textContent = 'Saldo: ' + valor;
+          saldo = valor;
+      });
+    }
+
+    var cartCount = 0;
+
+    function toggleCartButton(button, produto) {
+      var quantidade = parseInt(document.getElementById("quantidade" + produto).innerHTML);
+
+      if (button.innerHTML === "Comprar") {
+        console.log("quantidade = " + quantidade);
+        console.log("saldo = " + saldo);
+        if (saldo > 0 && saldo >= quantidade * -1) {
+          button.innerHTML = "Remover do Carrinho";
+          button.style.backgroundColor = "red";
+
+          adicionarAoCarrinho(produto, quantidade * -1);
+          
+          document.getElementById("cartCount").innerHTML = cartCount;
+        } else {
+          alert('Saldo insuficiente');
+        }
+
+        cartCount += quantidade;
+      } else {
+        button.innerHTML = "Comprar";
+        button.style.backgroundColor = "";
+
+        cartCount -= quantidade;
+
+        document.getElementById("cartCount").innerHTML = cartCount;
+      }
+    }
+  </script>
+  <script src="js/estoque.js"></script>
+  <script src="js/carrinhoController.js"></script>
+</body>
+</html>

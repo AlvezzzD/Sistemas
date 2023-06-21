@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Banca USJT</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="shortcut icon" href="/img/icone.ico" type="image/x-icon">
+  <script src="/js/carrinhoController.js"></script>
+</head>
+<body>
+  
+  <header class="fixed-header">
+    <h1>Banca USJT</h1>
+    <img src="/img/newsstand.png" alt="">
+    <nav>
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="/produtos">Produtos</a></li>
+        <li><a class="selecionado" href="/carrinho">Carrinho </a></li> <!-- Adicionado o link para a página do carrinho -->
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="carrinho">
+    </div>
+  </main>
+
+  <footer>
+    <p>Feitos pelos estudantes da USJT ®</p>
+  </footer>
+
+  <script>
+    function getCarrinho() {
+        fetch('/getCarrinho')
+        .then(response => response.text())
+        .then(resposta => {
+            let dados = JSON.parse(resposta);
+
+            // Criar tabela
+            let tabela = document.createElement("table");
+
+            // Criar header da tabela
+            let header = tabela.createTHead();
+            let row = header.insertRow(0);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            cell1.innerHTML = "<b>Item</b>";
+            cell2.innerHTML = "<b>Quantidade</b>";
+
+            for(let obj of dados) {
+                console.log(obj.item, obj.quantidade);
+                let row = tabela.insertRow();
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+                cell1.innerHTML = obj.item;
+                cell2.innerHTML = obj.quantidade;
+            }
+
+            document.getElementById("carrinho").appendChild(tabela);
+        });
+    }
+
+    getCarrinho();
+  </script>
+</body>
+</html>

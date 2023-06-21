@@ -1,0 +1,2 @@
+{"id":"97f00f2a-0792-4dd2-a160-f66d5f01f8bd","timestamp":"2023-06-21T01:26:11.845Z","data":{"message":"Saldo consultado com sucesso"}}
+{"id":"388b6d6f-bfff-49f5-8b3c-a422c69fe374","timestamp":"2023-06-21T01:26:11.851Z","data":{"message":"Item adicionado ao carrinho com sucesso"}}

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@azure/service-bus": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1"
+  }
+}
