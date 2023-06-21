@@ -7,7 +7,7 @@
 
 ## Descrição do Projeto
 
-Este repositório contém o código-fonte do projeto desenvolvido pela equipe acima mencionada. Composto por microsserviços, um responsável por checar o estoque e eoutro por remover do estoque e adicionar ao carrinho.
+Este repositório contém o código-fonte do projeto desenvolvido pela equipe acima mencionada. Composto por micros serviços, um responsável por checar o estoque e eoutro por remover do estoque e adicionar ao carrinho.
 
 ## Recursos Utilizados
 
@@ -16,4 +16,4 @@ Este repositório contém o código-fonte do projeto desenvolvido pela equipe ac
 - CSS3
 - Javascript
 - MYSQL
-- VSCode# Sistemas
+- VSCode
